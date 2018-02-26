@@ -311,7 +311,7 @@ public class ArrayList<E> extends AbstractList<E>
         // overflow-conscious code防止溢出代码
         int oldCapacity = elementData.length;
 
-        // 运算符 >> 是带符号右移. 如 oldCapacity = 10,则 newCapacity = 10 + (10 >> 1) = 10 + 5 = 15
+        // 将容量变为原来的1.5倍。运算符 >> 是带符号右移. 如 oldCapacity = 10,则 newCapacity = 10 + (10 >> 1) = 10 + 5 = 15
         int newCapacity = oldCapacity + (oldCapacity >> 1);
         if (newCapacity - minCapacity < 0)
             newCapacity = minCapacity;
